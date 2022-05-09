@@ -24,11 +24,11 @@ very easy to add new File parsers and search criteria.
 
 ### Register
 
-POST /api/register
+`POST /api/register`
 
 ### Login
 
-POST /api/login
+`POST /api/login`
 
 On success login it will return TOKEN to use for Books Import and Books Search.
 
@@ -36,18 +36,18 @@ Note: To login as Admin use the user "admin@gmail.com" and pass "pass123".
  
 ### Import Books
 
-POST /api/import-books
+`POST /api/import-books`
 
 **Note, you have to use Bearer Authentication 
 by Token which you will get on Admin login ("an_admin_token").**
 
 ### Search Books
 
-GET /api/books
+`GET /api/books`
 
 or with params:
 
-GET /api/books?name=some+name&period=max-5-years
+`GET /api/books?name=some+name&period=max-5-years`
 
 Available periods are:
 - max-5-years
