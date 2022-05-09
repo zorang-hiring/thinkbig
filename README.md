@@ -14,7 +14,7 @@ very easy to add new File parsers and search criteria.
 
 1. create and update .env file (user .env.example as template)
 2. `composer install`
-3. 'php artisan migrate:refresh --seed'
+3. `php artisan migrate:refresh --seed`
 
 ## Application run
 
