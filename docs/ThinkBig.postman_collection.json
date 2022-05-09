@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "df6bc225-508d-4454-a604-cc23ffc7e1d7",
+		"name": "ThinkBig",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "zoran",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "zoran@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "zoran@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "pass123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books Import",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "an_admin_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Volumes/MyProjects/interview-thinkbig/docs/BooksImport.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/import-books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"import-books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/books",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Wavel",
+							"disabled": true
+						},
+						{
+							"key": "period",
+							"value": "max-5-years",
+							"description": "Available: max-5-years, max-10-years, more-then-10-years",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
